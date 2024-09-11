@@ -16,7 +16,7 @@ public class Solution1 {
         boolean down = false;
         for (char c : s.toCharArray()) {
             rows.get(curRow).append(c);
-            if (curRow == 0 || curRow == numRows - 1) {
+            if (curRow == 0 || curRow == numRows - 1) { // 第一行和最后一行都需要改变方向
                 down = !down;
             }
             curRow += down ? 1 : -1;
